@@ -7,9 +7,8 @@
 </head>
 <body>
 
-
   <div class="keys">
-    <div data-key="65" class="key">
+    <div data-key="65" class="key" id="A">
       <kbd>A</kbd>
       <span class="sound">clap</span>
     </div>
@@ -59,6 +58,19 @@
 
 <script>
 
+  window.onkeydown = function (event) {
+
+    console.log(event + " a " + event.keyCode);
+
+    if (event.keyCode == 65) {
+      var audio65 = new Audio('./sounds/clap.wav');
+      audio65.play();
+    };
+    }
+
+  // var A = document.getElementById("A");
+  // console.log(A);
+  // document.getElementById("A").classList.add('playing');
 </script>
 
 
