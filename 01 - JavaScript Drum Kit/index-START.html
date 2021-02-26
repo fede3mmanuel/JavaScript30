@@ -65,12 +65,11 @@
     if (event.keyCode == 65) {
       var audio65 = new Audio('./sounds/clap.wav');
       audio65.play();
+      document.getElementById("A").classList.add('playing');
+      setTimeout(() => { document.getElementById("A").classList.remove('playing'); }, 100);
     };
     }
 
-  // var A = document.getElementById("A");
-  // console.log(A);
-  // document.getElementById("A").classList.add('playing');
 </script>
 
 
