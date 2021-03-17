@@ -69,9 +69,18 @@
     }
 
   </style>
-
+  
   <script>
+    var actualTime = new Date();
+    var hours = actualTime.getHours();
+    var minutes = actualTime.getMinutes();
+    var seconds = actualTime.getSeconds();
+    console.log("Hora: " + hours + "minutos: " + minutes + "segundos:" + seconds);
 
+    function testtime() {
+      console.log("test");
+    }
+    var t = setInterval(testtime,1000);
 
   </script>
 </body>
