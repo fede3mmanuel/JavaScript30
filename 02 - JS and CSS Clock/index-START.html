@@ -71,16 +71,24 @@
   </style>
   
   <script>
-    var actualTime = new Date();
-    var hours = actualTime.getHours();
-    var minutes = actualTime.getMinutes();
-    var seconds = actualTime.getSeconds();
-    console.log("Hora: " + hours + "minutos: " + minutes + "segundos:" + seconds);
+  
+    let hours = 0;
+    let minutes = 0;
+    let seconds = 0;
+    
+    function updateTime() {
+      let actualTime = new Date();
+      hours = actualTime.getHours();
 
-    function testtime() {
+      if (actualTime.getMinutes() != minutes) {
+        console.log("diferentes minutos");
+      }
+      minutes = actualTime.getMinutes();
+      seconds = actualTime.getSeconds();
+    console.log("Hora: " + hours + "minutos: " + minutes + "segundos:" + seconds);
       console.log("test");
     }
-    var t = setInterval(testtime,1000);
+    let t = setInterval(updateTime,1000);
 
   </script>
 </body>
