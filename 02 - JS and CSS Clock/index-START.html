@@ -81,17 +81,16 @@
       let actualTime = new Date();
 
       if (actualTime.getSeconds() != seconds) {
-        document.querySelector(".second-hand").style.transform = "rotate(" + 0 + "deg)";
-
         seconds = actualTime.getSeconds();
+        let secondsHandPosition = ((360/60)*seconds)+90; 
+        // 360 / 60 to get the valu of each second every second
+        // After that the value of each second multiply by the number of seconds actual
+        // Summ 90 to calibrate with a real clock
+
+        document.querySelector(".second-hand").style.transform = "rotate(" + secondsHandPosition + "deg)";
+
         console.log(seconds);
-      }
-
-      if (actualTime.getMinutes() != minutes) {
-        minutes = actualTime.getMinutes();
-        console.log("minutes");
-      }
-
+      } 
     }
     
       let t = setInterval(updateTime,1000);
