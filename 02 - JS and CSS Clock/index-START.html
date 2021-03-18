@@ -77,18 +77,17 @@
     let seconds = 0;
     
     function updateTime() {
+
       let actualTime = new Date();
-      hours = actualTime.getHours();
 
       if (actualTime.getMinutes() != minutes) {
-        console.log("diferentes minutos");
+        minutes = actualTime.getMinutes();
+        console.log("minutes");
       }
-      minutes = actualTime.getMinutes();
-      seconds = actualTime.getSeconds();
-    console.log("Hora: " + hours + "minutos: " + minutes + "segundos:" + seconds);
-      console.log("test");
-    }
-    let t = setInterval(updateTime,1000);
+
+      }
+    
+      let t = setInterval(updateTime,1000);
 
   </script>
 </body>
