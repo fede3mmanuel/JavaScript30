@@ -80,12 +80,17 @@
 
       let actualTime = new Date();
 
+      if (actualTime.getSeconds() != seconds) {
+        seconds = actualTime.getSeconds();
+        console.log(seconds);
+      }
+
       if (actualTime.getMinutes() != minutes) {
         minutes = actualTime.getMinutes();
         console.log("minutes");
       }
 
-      }
+    }
     
       let t = setInterval(updateTime,1000);
 
