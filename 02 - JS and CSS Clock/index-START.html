@@ -81,7 +81,7 @@
       let actualTime = new Date();
 
       if (actualTime.getSeconds() != seconds) {
-        document.querySelector(".hour-hand").style.backgroundColor = "red";
+        document.querySelector(".second-hand").style.transform = "rotate(" + 0 + "deg)";
 
         seconds = actualTime.getSeconds();
         console.log(seconds);
