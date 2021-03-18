@@ -81,6 +81,8 @@
       let actualTime = new Date();
 
       if (actualTime.getSeconds() != seconds) {
+        document.querySelector(".hour-hand").style.backgroundColor = "red";
+
         seconds = actualTime.getSeconds();
         console.log(seconds);
       }
