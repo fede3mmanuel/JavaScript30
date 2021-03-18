@@ -90,7 +90,16 @@
         document.querySelector(".second-hand").style.transform = "rotate(" + secondsHandPosition + "deg)";
 
         console.log(seconds);
-      } 
+      }
+      
+      if (actualTime.getMinutes() != minutes) {
+        minutes = actualTime.getMinutes();
+        let minutesHandPosition = ((360/60)*minutes)+90;
+        //Similar to get the seconds
+
+        document.querySelector(".min-hand").style.transform = "rotate(" + minutesHandPosition + "deg";
+        console.log(minutes);
+      }
     }
     
       let t = setInterval(updateTime,1000);
