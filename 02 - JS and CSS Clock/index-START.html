@@ -89,7 +89,7 @@
 
         document.querySelector(".second-hand").style.transform = "rotate(" + secondsHandPosition + "deg)";
 
-        console.log(seconds);
+        //console.log(seconds);
       }
       
       if (actualTime.getMinutes() != minutes) {
@@ -97,8 +97,18 @@
         let minutesHandPosition = ((360/60)*minutes)+90;
         //Similar to get the seconds
 
-        document.querySelector(".min-hand").style.transform = "rotate(" + minutesHandPosition + "deg";
-        console.log(minutes);
+        document.querySelector(".min-hand").style.transform = "rotate(" + minutesHandPosition + "deg)";
+        //console.log(minutes);
+      }
+
+      if (actualTime.getHours() != hours) {
+        hours = actualTime.getHours();
+        let hoursHandPosition = ((360/12)*hours)+90;
+        console.log(hours + " " + hoursHandPosition);
+        // Similar to get seconds
+        
+        document.querySelector(".hour-hand").style.transform = "rotate(" + hoursHandPosition + "deg)";
+        
       }
     }
     
