@@ -102,7 +102,7 @@
       if (actualTime.getHours() != hours) {
         hours = actualTime.getHours();
         let hoursHandPosition = ((360/12)*hours)+90;
-        // Similar to get seconds
+        // Similar to seconconds except we divide between 12 to adjust the number of hours on a circle
         
         document.querySelector(".hour-hand").style.transform = "rotate(" + hoursHandPosition + "deg)";
         
