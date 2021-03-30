@@ -70,6 +70,12 @@
       document.documentElement.style.cssText = `--spacing: ${ valueOfSpacingInput }px;--blur: ${ valueOfBlurInput }px`;
     })
 
+    document.getElementById('blur').addEventListener("change", function () {
+      valueOfSpacingInput = document.getElementById('spacing').value;
+      valueOfBlurInput = document.getElementById('blur').value;
+      document.documentElement.style.cssText = `--spacing: ${ valueOfSpacingInput }px;--blur: ${ valueOfBlurInput }px`;
+    })
+
   </script>
 
 </body>
