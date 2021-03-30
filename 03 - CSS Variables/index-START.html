@@ -61,10 +61,12 @@
   <script>
 
     function spacing() {
-      console.log(document.getElementById('spacing').value);
-      document.documentElement.style.cssText = '--spacing: 100px;'
+      const valueOfSpacingInput = document.getElementById('spacing').value;
+      //document.documentElement.style.cssText = '--spacing: ' + valueOfSpacingInput + 'px;'
+      document.documentElement.style.cssText = '--spacing: ' + valueOfSpacingInput + 'px;'
+
     }
-    
+
   </script>
 
 </body>
