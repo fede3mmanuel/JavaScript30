@@ -61,21 +61,34 @@
   <script>
 
     let valueOfSpacingInput = document.getElementById('spacing').value;
-    let valueOfBlurInput = document.getElementById('blur').value;;
+    let valueOfBlurInput = document.getElementById('blur').value;
+    let valueOfTheColor = document.getElementById('base').value;
 
+    updateValues(); //Initilize of the values
 
     document.getElementById('spacing').addEventListener("change", function () {
-      valueOfSpacingInput = document.getElementById('spacing').value;
-      valueOfBlurInput = document.getElementById('blur').value;
-      document.documentElement.style.cssText = `--spacing: ${ valueOfSpacingInput }px;--blur: ${ valueOfBlurInput }px`;
+      updateValues(); //every change execute the function "uateValues"
     })
 
     document.getElementById('blur').addEventListener("change", function () {
-      valueOfSpacingInput = document.getElementById('spacing').value;
-      valueOfBlurInput = document.getElementById('blur').value;
-      document.documentElement.style.cssText = `--spacing: ${ valueOfSpacingInput }px;--blur: ${ valueOfBlurInput }px`;
+      updateValues();
     })
 
+    document.getElementById('base').addEventListener('change', function () {
+
+      updateValues();
+    
+    })
+
+    function updateValues() { //this function update to the new values or keep the last values
+
+      valueOfSpacingInput = document.getElementById('spacing').value;
+      valueOfBlurInput = document.getElementById('blur').value;
+      valueOfTheColor = document.getElementById('base').value;
+      document.documentElement.style.cssText = `--spacing: ${ valueOfSpacingInput }px;--blur: ${ valueOfBlurInput }px; --base: ${ valueOfTheColor }`;
+    
+    }
+    
   </script>
 
 </body>
