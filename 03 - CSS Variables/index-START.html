@@ -9,7 +9,7 @@
 
   <div class="controls">
     <label for="spacing">Spacing:</label>
-    <input id="spacing" type="range" name="spacing" min="10" max="200" value="10" data-sizing="px" onchange="spacing()">
+    <input id="spacing" type="range" name="spacing" min="10" max="200" value="10" data-sizing="px">
 
     <label for="blur">Blur:</label>
     <input id="blur" type="range" name="blur" min="0" max="25" value="10" data-sizing="px">
@@ -60,11 +60,11 @@
 
   <script>
 
-    function spacing() {
+    document.getElementById('spacing').addEventListener("change", function name(params) {
       const valueOfSpacingInput = document.getElementById('spacing').value;
       document.documentElement.style.cssText = `--spacing: ${ valueOfSpacingInput }px;`;
-    }
-
+    })
+    
   </script>
 
 </body>
