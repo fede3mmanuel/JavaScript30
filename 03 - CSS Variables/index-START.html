@@ -9,7 +9,7 @@
 
   <div class="controls">
     <label for="spacing">Spacing:</label>
-    <input id="spacing" type="range" name="spacing" min="10" max="200" value="10" data-sizing="px">
+    <input id="spacing" type="range" name="spacing" min="10" max="200" value="10" data-sizing="px" onchange="spacing()">
 
     <label for="blur">Blur:</label>
     <input id="blur" type="range" name="blur" min="0" max="25" value="10" data-sizing="px">
@@ -31,6 +31,10 @@
       padding: var(--spacing);
       background: var(--base);
       filter: blur(var(--blur));
+    }
+
+    .hl {
+      color: var(--base);
     }
     /*
       misc styles, nothing to do with CSS variables
@@ -54,7 +58,12 @@
     }
   </style>
 
-  <script>
+  <script>    
+
+    function spacing() {
+      console.log(document.getElementById('spacing').value);
+      
+    }
   </script>
 
 </body>
