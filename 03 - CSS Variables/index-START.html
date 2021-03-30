@@ -60,21 +60,16 @@
 
   <script>
 
-    document.getElementById('spacing').addEventListener("change", function () {
-      const valueOfSpacingInput = document.getElementById('spacing').value;
-      const valueOfBlurInput = document.getElementById('blur').value;
-      document.documentElement.style.cssText = `--spacing: ${ valueOfSpacingInput }px;--blur: ${ valueOfBlurInput }px`;
+    let valueOfSpacingInput = 10;
+    let valueOfBlurInput = 10;
 
-      // const valueOfBlurInput = document.getElementById('blur').value;
-      //document.documentElement.style.cssText = `--blur: ${ valueOfBlurInput }px`;
+
+    document.getElementById('spacing').addEventListener("change", function () {
+      valueOfSpacingInput = document.getElementById('spacing').value;
+      valueOfBlurInput = document.getElementById('blur').value;
+      document.documentElement.style.cssText = `--spacing: ${ valueOfSpacingInput }px;--blur: ${ valueOfBlurInput }px`;
     })
-    
-    // document.getElementById('blur').addEventListener("change", function () {
-    //   const valueOfSpacingInput = document.getElementById('spacing').value;
-    //   document.documentElement.style.cssText = `--spacing: ${ valueOfSpacingInput }px;`;
-    //   const valueOfBlurInput = document.getElementById('blur').value;
-    //   document.documentElement.style.cssText = `--blur: ${ valueOfBlurInput }px`;      
-    // })
+
   </script>
 
 </body>
