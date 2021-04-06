@@ -46,13 +46,17 @@
     // Array.prototype.map()
     // 2. Give us an array of the inventors first and last names
 
-    let raices = people.map(function (people) {
+    let FirstandLastNames = people.map(function (people) {
       return people.split(", ");
     });
-    console.log(raices);
+    console.log(FirstandLastNames);
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
 
+    let test = inventors.sort((a,b) => {
+      return b.year - a.year;
+    });
+    console.log(test);
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live all together?
 
