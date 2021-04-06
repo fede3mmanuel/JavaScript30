@@ -134,6 +134,13 @@
      'Boulevard de la Zone'];
 
      console.log(Category_Boulevards_in_Paris);
+
+    let OnlyapartoftheCategory = Category_Boulevards_in_Paris.filter(function (params) {
+      return params.includes("de");
+    })
+
+    console.log("------------");
+    console.log(OnlyapartoftheCategory);
     // 7. sort Exercise
     // Sort the people alphabetically by last name
 
