@@ -146,10 +146,21 @@
 
     let alphabeticallybylastName = Category_Boulevards_in_Paris.sort();
     console.log(alphabeticallybylastName);
+
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
 
+    const constToReduce = (total, sum) => total + sum;
+    let sumWithConst = data.reduce(constToReduce);
+
+    function functionToReduce(total, sum) {
+      return total + sum;
+    }
+    let sumWithFunction = data.reduce(functionToReduce);
+    
+    console.log(sumWithFunction);
+    console.log(sumWithConst);
   </script>
 </body>
 </html>
