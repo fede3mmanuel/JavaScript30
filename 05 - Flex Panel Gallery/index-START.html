@@ -127,18 +127,14 @@
   </div>
 
   <script>
-    // function test(param) {
-    //   console.log("test" + param);
-    //   div.classlist.add("open");
-    // }
-    let mouse = false;
     let panel1 = document.getElementById('panel1');
     function panelexpansion(params) {
       if (params) {
         panel1.classList.add("open");
+        panel1.classList.add("open-active");
       }else {
         panel1.classList.remove("open");
-        console.log("notest");
+        panel1.classList.remove("open-active");
       }
     }
   </script>
