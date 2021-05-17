@@ -99,7 +99,7 @@
 
 
   <div class="panels">
-    <div class="panel panel1" onmouseover="test(`panel1`)" id="panel1">
+    <div class="panel panel1" onmouseover="panelexpansion(true)" onmouseout="panelexpansion(false)" id="panel1">
       <p>Hey</p>
       <p>Let's</p>
       <p>Dance</p>
@@ -131,9 +131,15 @@
     //   console.log("test" + param);
     //   div.classlist.add("open");
     // }
-    let el = document.getElementById('panel1');
-    function test(params) {
-      el.classList.add("open");
+    let mouse = false;
+    let panel1 = document.getElementById('panel1');
+    function panelexpansion(params) {
+      if (params) {
+        panel1.classList.add("open");
+      }else {
+        panel1.classList.remove("open");
+        console.log("notest");
+      }
     }
   </script>
 
